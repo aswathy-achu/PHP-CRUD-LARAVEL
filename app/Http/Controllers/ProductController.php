@@ -48,8 +48,9 @@ class ProductController extends Controller
             $product = null;
         }
     
-       
+        $categories = Category::all();
         $page_data['product'] = $product;
+        $page_data['categories'] = $categories;
         $page_data['menu'] = 'product';
         return view('createproduct', $page_data);
     }
